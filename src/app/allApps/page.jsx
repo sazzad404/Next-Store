@@ -6,7 +6,7 @@ import AppFeedbackCarousel from "@/Components/features/AnimatedFeedbacks";
 import PrivateRoute from "@/Private/PrivateRoute";
 
 export default async function AllApps() {
-  const res = await fetch("http://localhost:5000/apps");
+  const res = await fetch("https://hero-store-server.vercel.app/apps");
   const apps = await res.json();
 
   return (

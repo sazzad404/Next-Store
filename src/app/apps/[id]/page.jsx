@@ -21,7 +21,7 @@ export default function AppDetailsPage() {
     if (params?.id) {
       setDataLoading(true);
       axios
-        .get(`http://localhost:5000/apps/${params.id}`)
+        .get(`https://hero-store-server.vercel.app/apps/${params.id}`)
         .then((res) => setApp(res.data))
         .catch((err) => console.error(err))
         .finally(() => setDataLoading(false));
@@ -116,7 +116,7 @@ export default function AppDetailsPage() {
             </div>
           </div>
         </motion.div>
-        
+
         {/* Ratings Breakdown */}
         <AppStatsChart ratings={app.ratings} downloads={app.downloads} />
         <AppFeedback></AppFeedback>

@@ -12,7 +12,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/apps?limit=10")
+    fetch("https://hero-store-server.vercel.app/apps?limit=10")
       .then((res) => res.json())
       .then((data) => {
         setApps(data);
@@ -42,12 +42,14 @@ export default function Home() {
         )}
       </section>
       <div className="flex justify-center pb-8">
-        <Link href={"/allApps"} className=" px-4 py-2 bg-purple-600 cursor-pointer hover:bg-purple-700 text-white rounded-lg text-sm transition">
+        <Link
+          href={"/allApps"}
+          className=" px-4 py-2 bg-purple-600 cursor-pointer hover:bg-purple-700 text-white rounded-lg text-sm transition"
+        >
           Discover more apps
-        </Link >
+        </Link>
       </div>
       <Investors></Investors>
-     
     </div>
   );
 }
