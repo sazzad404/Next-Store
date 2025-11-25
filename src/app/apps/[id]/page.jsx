@@ -1,4 +1,5 @@
 "use client";
+export const dynamic = 'force-dynamic';
 
 import { useAuth } from "@/app/auth/FirebaseAuthProvider";
 import Loader from "@/Components/Loader";
